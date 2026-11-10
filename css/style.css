@@ -1,0 +1,419 @@
+:root {
+    --color-white: #FFFFFF;
+    --color-bg: #F7F9FC;
+    --color-accent: #AB00EA;
+    --color-text: #1F2430;
+    --color-muted: #6B7280;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+    background-color: var(--color-white);
+    border-bottom: 4px solid var(--color-accent);
+    padding: 24px 32px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: 0.5px;
+}
+
+.student-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+/* ---------- Navbar ---------- */
+.site-nav {
+    background-color: var(--color-white);
+    padding: 0 32px;
+    border-bottom: 1px solid #E5E9F0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 12px 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.nav-links a.active {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+/* ---------- History buttons ---------- */
+.nav-history {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.btn-history {
+    padding: 10px 18px;
+    border: 2px solid var(--color-accent);
+    border-radius: 8px;
+    background-color: var(--color-white);
+    color: var(--color-accent);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-history:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+/* ---------- Main content ---------- */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 32px;
+}
+
+.page-title {
+    font-size: 44px;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 12px;
+}
+
+.page-subtitle {
+    font-size: 20px;
+    color: var(--color-muted);
+    font-weight: 400;
+}
+
+.page-placeholder {
+    margin-top: 40px;
+    padding: 32px;
+    background-color: var(--color-white);
+    border: 1px dashed var(--color-accent);
+    border-radius: 12px;
+    color: var(--color-muted);
+    text-align: center;
+}
+
+/* ---------- Shared form controls ---------- */
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.btn {
+    padding: 10px 18px;
+    border: 2px solid var(--color-accent);
+    border-radius: 8px;
+    background-color: var(--color-white);
+    color: var(--color-accent);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: #8f00c7;
+}
+
+.field-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.field-label {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+input[type="number"],
+select {
+    padding: 10px 12px;
+    border: 2px solid #E5E9F0;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: var(--color-white);
+    color: var(--color-text);
+    outline: none;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: var(--color-accent);
+}
+
+input[type="color"] {
+    width: 46px;
+    height: 40px;
+    padding: 2px;
+    border: 2px solid #E5E9F0;
+    border-radius: 8px;
+    background-color: var(--color-white);
+    cursor: pointer;
+}
+
+/* ---------- Graphics page ---------- */
+.canvas-wrap {
+    margin-top: 24px;
+    padding: 16px;
+    background-color: var(--color-white);
+    border: 1px solid #E5E9F0;
+    border-radius: 12px;
+}
+
+#scene {
+    display: block;
+    width: 100%;
+    height: 460px;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E9F0;
+    border-radius: 8px;
+    cursor: crosshair;
+    touch-action: none;
+}
+
+.status-msg {
+    margin-top: 14px;
+    min-height: 22px;
+    font-weight: 600;
+    color: var(--color-muted);
+}
+
+.status-msg.error {
+    color: #C0392B;
+}
+
+/* ---------- Web Workers page ---------- */
+.worker-layout {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 320px);
+    min-height: 340px;
+}
+
+.worker-form {
+    padding: 24px;
+    background-color: var(--color-white);
+    border: 1px solid #E5E9F0;
+    border-radius: 12px;
+}
+
+.console-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.console-title {
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+#console {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #1F2430;
+    color: #E6F0FF;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 16px 18px;
+    border-radius: 12px;
+    border: 1px solid #E5E9F0;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+#console:empty::before {
+    content: "";
+}
+
+.console-line {
+    margin: 0;
+}
+
+.console-done {
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+.console-error {
+    color: #FF6B6B;
+}
+
+.console-spinner {
+    color: #9FB3D1;
+}
+
+.worker-status {
+    margin-top: 10px;
+    min-height: 22px;
+    font-weight: 600;
+    color: var(--color-muted);
+}
+
+.worker-status.success {
+    color: #18A558;
+}
+
+.worker-status.error {
+    color: #C0392B;
+}
+
+/* ---------- Match-3 game (Graphics page) ---------- */
+.game-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    margin-top: 24px;
+    padding: 18px 20px;
+    background-color: var(--color-white);
+    border: 1px solid #E5E9F0;
+    border-radius: 12px;
+}
+
+.game-stat {
+    display: flex;
+    flex-direction: column;
+    min-width: 90px;
+}
+
+.game-stat-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-muted);
+    font-weight: 600;
+}
+
+.game-stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.game-stat.high .game-stat-value {
+    color: #FF8F00;
+}
+
+.game-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.canvas-wrap {
+    margin-top: 20px;
+    padding: 16px;
+    background-color: var(--color-white);
+    border: 1px solid #E5E9F0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+#game-board {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 1 / 1;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E9F0;
+    border-radius: 8px;
+    cursor: pointer;
+    touch-action: none;
+}
+
+.game-hint {
+    margin-top: 16px;
+    min-height: 22px;
+    font-weight: 600;
+    color: var(--color-muted);
+    text-align: center;
+}
+
+.game-hint.error {
+    color: #C0392B;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Hub — Графика и Анимация</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="logo">IT Hub</div>
+            <div class="student-name">Губенко Сергей</div>
+        </div>
+    </header>
+
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <div class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="graphics.html" class="active">Графика и Анимация</a>
+                <a href="workers.html">Web Workers</a>
+            </div>
+            <div class="nav-history">
+                <button class="btn-history" type="button" onclick="history.back()">Назад</button>
+                <button class="btn-history" type="button" onclick="history.forward()">Вперёд</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h1 class="page-title">Графика и Анимация</h1>
+        <p class="page-subtitle">Игра «Три в ряд» на Canvas API</p>
+
+        <div class="game-panel">
+            <div class="game-stat">
+                <span class="game-stat-label">Ходы</span>
+                <span class="game-stat-value" id="moves-left">30</span>
+            </div>
+            <div class="game-stat">
+                <span class="game-stat-label">Очки</span>
+                <span class="game-stat-value" id="score">0</span>
+            </div>
+            <div class="game-stat high">
+                <span class="game-stat-label">Рекорд</span>
+                <span class="game-stat-value" id="high-score">0</span>
+            </div>
+            <div class="game-actions">
+                <button class="btn btn-primary" id="new-game" type="button">Новая игра</button>
+            </div>
+        </div>
+
+        <div class="canvas-wrap">
+            <canvas id="game-board" width="540" height="540"></canvas>
+        </div>
+
+        <p class="game-hint" id="game-hint" aria-live="polite">Кликните два соседних шарика, чтобы поменять их местами.</p>
+    </main>
+
+    <script src="js/graphics.js"></script>
+</body>
+</html>
